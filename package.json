@@ -1,6 +1,7 @@
 {
   "name": "pavers",
   "version": "1.0.0",
+  "homepage": "https://chika334.github.io/pavers",
   "title": "pavers",
   "description": "Covers all payment.",
   "dependencies": {
@@ -67,6 +68,7 @@
     "yup": "0.28.5"
   },
   "scripts": {
+    "deploy": "gh-pages -d dist",
     "start": "env-cmd -f .env react-scripts start",
     "build": "env-cmd -f .env react-scripts build",
     "test": "react-scripts test",
