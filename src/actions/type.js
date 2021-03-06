@@ -1,0 +1,9 @@
+export const HIDE_LOADER = "HIDE_LOADER";
+export const SHOW_LOADER = "SHOW_LOADER";
+export const USER_LOADING = "USER_LOADING";
+export const USER_LOADED = "USER_LOADED";
+export const USER_ERROR = "USER_ERROR";
+export const LOGIN_USER = "LOGIN_USER";
+export const LOGIN_FAIL = "LOGIN_FAIL";
+export const SHOW_MODAL = "SHOW_MODAL";
+export const HIDE_MODAL = "HIDE_MODAL";
