@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, HashRouter } from "react-router-dom";
 import store from "./config/store";
 import { Provider } from "react-redux";
 // import reducers from "./reducers";
@@ -262,11 +262,13 @@ class App extends Component {
   render() {
     return (
       <Provider store={store}>
-        <BrowserRouter basename="/">
+        <HashRouter>
+          {/* <BrowserRouter basename="/"> */}
           <ScrollToTop>
             <Routes />
           </ScrollToTop>
-        </BrowserRouter>
+          {/* </BrowserRouter> */}
+        </HashRouter>
       </Provider>
     );
   }
