@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "00a836cee9847c07d0dabff39745ba3b",
+    "revision": "96028652b0b051911162e2ac01363dc1",
     "url": "/pavers/index.html"
   },
   {
@@ -12,7 +12,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/pavers/static/css/4.859f00eb.chunk.css"
   },
   {
-    "revision": "2bbb1205ec500f400ab4",
+    "revision": "33318a5c8fe26449320a",
     "url": "/pavers/static/css/main.27088a94.chunk.css"
   },
   {
@@ -44,8 +44,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/pavers/static/js/6.0825bbae.chunk.js"
   },
   {
-    "revision": "2bbb1205ec500f400ab4",
-    "url": "/pavers/static/js/main.fe6cbaa6.chunk.js"
+    "revision": "33318a5c8fe26449320a",
+    "url": "/pavers/static/js/main.80cb9f2b.chunk.js"
   },
   {
     "revision": "7a79943971f286672202",
