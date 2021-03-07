@@ -140,9 +140,6 @@ const Header = (props) => {
           </Button>
 
           <div className="p-3">
-            {/* <div className="px-4 text-uppercase py-2 text-second font-weight-bold font-size-sm">
-                  {process.env.REACT_APP_NAME}
-                </div> */}
             <List
               component="div"
               className="nav-pills nav-neutral-primary nav-pills-rounded"
