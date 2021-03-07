@@ -1,9 +1,65 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
+import { TextField, Button, Card } from "@material-ui/core";
 
-class AddGate extends Component {
-  render() {
-    return <div>Gate</div>;
-  }
-}
+const AddGate = () => {
+  const [values, setValues] = useState({
+    imageUrl: "",
+    gatewayName: "",
+  });
+
+  const { imageUrl, gatewayName } = values;
+
+  const handleChange = (e) => {
+    setValues({ ...values, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    console.log(e.target.value);
+  };
+
+  return (
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignContent: "center",
+      }}
+      className="bg-composed-wrapper--content p-3 p-md-5"
+    >
+      <div style={{ maxWidth: "100%", marginLeft: "10px" }}>
+        <Card className="rounded-sm overflow-hidden shadow-xxl font-size-sm p-3 p-sm-0">
+          <form className="p-5">
+            <h3>Add Gateway</h3>
+            <div className="mb-4 pt-4">
+              <TextField
+                id="filled-name"
+                label="Logo Url"
+                value={imageUrl}
+                name="imageUrl"
+                onChange={handleChange}
+                variant="filled"
+              />
+            </div>
+
+            <div className="mb-3">
+              <TextField
+                id="filled-name"
+                label="Gateway Name"
+                value={gatewayName}
+                name="gatewayName"
+                onChange={handleChange}
+                variant="filled"
+              />
+            </div>
+
+            <Button variant="contained" color="primary" onClick={handleSubmit}>
+              add
+            </Button>
+          </form>
+        </Card>
+      </div>
+    </div>
+  );
+};
 
 export default AddGate;

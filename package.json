@@ -68,7 +68,8 @@
     "yup": "0.28.5"
   },
   "scripts": {
-    "deploy": "env-cmd -f .env react-scripts gh-pages -d build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "env-cmd -f .env react-scripts start",
     "build": "env-cmd -f .env react-scripts build",
     "test": "react-scripts test",
