@@ -59,12 +59,12 @@ const Routes = (props) => {
     duration: 0.3,
   };
 
-  useEffect(() => {
-    props.showLoader();
-    setTimeout(() => {
-      props.hideLoader();
-    }, 2000);
-  }, []);
+  // useEffect(() => {
+  //   props.showLoader();
+  //   setTimeout(() => {
+  //     props.hideLoader();
+  //   }, 2000);
+  // }, []);
 
   return (
     <ThemeProvider theme={MuiTheme}>
