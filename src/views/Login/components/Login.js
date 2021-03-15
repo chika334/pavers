@@ -3,40 +3,47 @@ import { Grid, Button, TextField, InputAdornment } from "@material-ui/core";
 import MailOutlineTwoToneIcon from "@material-ui/icons/MailOutlineTwoTone";
 import LockTwoToneIcon from "@material-ui/icons/LockTwoTone";
 import { Alert } from "@material-ui/lab";
-import hero6 from "../../../assets/images/Pavers.svg";
-import { loginUser } from "../../../actions/userAction";
+// import hero6 from "../../../assets/images/Pavers.svg";
+// import { loginUser } from "../../../actions/userAction";
 import { connect, useSelector } from "react-redux";
 import { withRouter } from "react-router-dom";
 
 const Login = (props) => {
-  const user = useSelector((state) => state.userReducer.isAuthenticated);
+  // const user = useSelector((state) => state.userReducer.isAuthenticated);
   const [values, setValues] = useState({
     email: "",
     password: "",
     validation: false,
   });
   const [error, setError] = useState("");
-
+  const [redirect, setRedirect] = useState(false);
   const { email, password, validation } = values;
 
   const handleChange = (e) => {
     setValues({ ...values, [e.target.name]: e.target.value });
   };
 
-  useEffect(() => {
-    if (user) {
-      if (localStorage.getItem("redirect") === undefined) {
-        // props.history.push(`/http://chika334.github.io/pavers/pageProfile`);
-        props.history.push(`${process.env.REACT_APP_URL}/pageProfile`);
-      } else {
-        const redirect = localStorage.getItem("redirect");
-        props.history.push(`${redirect}`);
-        props.history.push(`${process.env.REACT_APP_URL}${redirect}`);
-      }
-    }
-  }, [user]);
+  // useEffect(() => {
+  //   // props.history.push(`${process.env.REACT_APP_URL}/pageProfile`);
+  //   // if (user) {
+  //   //   if (localStorage.getItem("redirect") === undefined) {
+  //   //     // props.history.push(`/http://chika334.github.io/pavers/pageProfile`);
+  //   //     props.history.push(`${process.env.REACT_APP_URL}/pageProfile`);
+  //   //   } else {
+  //   //     props.history.push(`${process.env.REACT_APP_URL}/pageProfile`);
+  //   //     // const redirect = localStorage.getItem("redirect");
+  //   //     // props.history.push(`${redirect}`);
+  //   //     // props.history.push(`${process.env.REACT_APP_URL}${redirect}`);
+  //   //   }
+  //   // }
+  // }, [user]);
 
-  // console.log(user);
+  useEffect(() => {
+    if (redirect === true) {
+      props.history.push(`${process.env.REACT_APP_URL}/pageProfile`);
+      console.log("User");
+    }
+  });
 
   const validateEmail = (value) => {
     let errors;
@@ -79,7 +86,9 @@ const Login = (props) => {
       email,
       password,
     };
-    props.loginUser(user);
+
+    setRedirect(true);
+    // props.loginUser(user);
 
     // props.history.push(`${process.env.REACT_APP_URL}/pageProfile`);
   };
@@ -154,4 +163,5 @@ const Login = (props) => {
     </Grid>
   );
 };
-export default withRouter(connect(null, { loginUser })(Login));
+export default withRouter(connect(null, null)(Login));
+// export default withRouter(connect(null, { loginUser })(Login));

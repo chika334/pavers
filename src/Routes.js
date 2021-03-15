@@ -8,12 +8,9 @@ import {
   HashRouter,
 } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
-
 import { ThemeProvider } from "@material-ui/styles";
 import MuiTheme from "./theme";
-
 import { showLoader, hideLoader } from "./actions/loading";
-
 import SuspenseLoading from "./layout-components/Loader/Loader";
 import Footer from "./layout-components/Footer";
 
@@ -29,13 +26,17 @@ import Login from "./views/Login";
 import Home from "./views/Home";
 import AddProduct from "./views/AddProduct";
 import AddGateway from "./views/AddGateway";
+import Transactions from "./views/Transactions";
+// import Filter from "./views/Transactions/Filter";
 
 // pages
 import PageError404 from "./Pages/PageError404";
 import PageError500 from "./Pages/PageError500";
 import PageError505 from "./Pages/PageError505";
-const PageFileManager = lazy(() => import("./Pages/PageFileManager"));
-const PageProfile = lazy(() => import("./Pages/PageProfile"));
+import PageProfile from "./Pages/PageProfile";
+import PageFileManager from "./Pages/PageFileManager";
+// const PageFileManager = lazy(() => import("./Pages/PageFileManager"));
+// const PageProfile = lazy(() => import("./Pages/PageProfile"));
 
 const Routes = (props) => {
   const location = useLocation();
@@ -59,12 +60,12 @@ const Routes = (props) => {
     duration: 0.3,
   };
 
-  // useEffect(() => {
-  //   props.showLoader();
-  //   setTimeout(() => {
-  //     props.hideLoader();
-  //   }, 2000);
-  // }, []);
+  useEffect(() => {
+    props.showLoader();
+    setTimeout(() => {
+      props.hideLoader();
+    }, 2000);
+  }, []);
 
   return (
     <ThemeProvider theme={MuiTheme}>
@@ -75,98 +76,115 @@ const Routes = (props) => {
           <>
             <Suspense fallback={<SuspenseLoading />}>
               {/* <HashRouter> */}
-                <Switch>
-                  <Redirect
-                    exact
-                    from="/"
-                    to={`${process.env.REACT_APP_URL}/home`}
-                  />
-                  <Route
-                    path={[
-                      `${process.env.REACT_APP_URL}/addproducts`,
-                      `${process.env.REACT_APP_URL}/addgateway`,
-                      `${process.env.REACT_APP_URL}/pageFileManager`,
-                      `${process.env.REACT_APP_URL}/pageProfile`,
-                      `${process.env.REACT_APP_URL}/home`,
-                    ]}
-                  >
-                    <CollapsedSidebar>
-                      <Switch location={location} key={location.pathname}>
-                        <motion.div
-                          initial="initial"
-                          animate="in"
-                          exit="out"
-                          variants={pageVariants}
-                          transition={pageTransition}
-                        >
-                          <Route
-                            path={`${process.env.REACT_APP_URL}/home`}
+              <Switch>
+                <Redirect
+                  exact
+                  from="/"
+                  to={`${process.env.REACT_APP_URL}/home`}
+                />
+                <Route
+                  path={[
+                    `${process.env.REACT_APP_URL}/addproducts`,
+                    `${process.env.REACT_APP_URL}/addgateway`,
+                    `${process.env.REACT_APP_URL}/pageFileManager`,
+                    `${process.env.REACT_APP_URL}/pageProfile`,
+                    `${process.env.REACT_APP_URL}/home`,
+                    `${process.env.REACT_APP_URL}/tranx`,
+                    // `${process.env.REACT_APP_URL}/filterByDate`,
+                  ]}
+                >
+                  <CollapsedSidebar>
+                    <Switch location={location} key={location.pathname}>
+                      <motion.div
+                        initial="initial"
+                        animate="in"
+                        exit="out"
+                        variants={pageVariants}
+                        transition={pageTransition}
+                      >
+                        <Route
+                          path={`${process.env.REACT_APP_URL}/home`}
+                          exact
+                          component={Home}
+                        />
+                        <Route
+                          path={`${process.env.REACT_APP_URL}/addproducts`}
+                          exact
+                          component={AddProduct}
+                        />
+                        {/* <Route
+                            path={`${process.env.REACT_APP_URL}/filterByDate`}
                             exact
-                            component={Home}
-                          />
-                          <Route
-                            path={`${process.env.REACT_APP_URL}/addproducts`}
-                            exact
-                            component={AddProduct}
-                          />
-                          <Route
-                            path={`${process.env.REACT_APP_URL}/addgateway`}
-                            exact
-                            component={AddGateway}
-                          />
-                          <Route
-                            path={`${process.env.REACT_APP_URL}/pageFileManager`}
-                            exact
-                            component={PageFileManager}
-                          />
-                          <Route
-                            path={`${process.env.REACT_APP_URL}/pageProfile`}
-                            exact
-                            component={PageProfile}
-                          />
-                        </motion.div>
-                      </Switch>
-                      <Footer />
-                    </CollapsedSidebar>
-                  </Route>
-                  <Route
-                    path={[
-                      `${process.env.REACT_APP_URL}/PageError404`,
-                      `${process.env.REACT_APP_URL}/PageError500`,
-                      `${process.env.REACT_APP_URL}/PageError505`,
-                      `${process.env.REACT_APP_URL}/login`,
-                    ]}
-                  >
-                    <MinimalLayout>
-                      <Switch location={location} key={location.pathname}>
-                        <motion.div
-                          initial="initial"
-                          animate="in"
-                          exit="out"
-                          variants={pageVariants}
-                          transition={pageTransition}
-                        >
-                          <Route
-                            path={`${process.env.REACT_APP_URL}/login`}
-                            component={Login}
-                          />
-                          <Route
-                            path={`${process.env.REACT_APP_URL}/PageError404`}
-                            component={PageError404}
-                          />
-                          <Route
-                            path={`${process.env.REACT_APP_URL}/PageError500`}
-                            component={PageError500}
-                          />
-                          <Route
-                            path={`${process.env.REACT_APP_URL}/PageError505`}
-                            component={PageError505}
-                          />
-                        </motion.div>
-                      </Switch>
-                    </MinimalLayout>
-                  </Route>
-                </Switch>
+                            component={Filter}
+                          /> */}
+                        <Route
+                          path={`${process.env.REACT_APP_URL}/tranx`}
+                          exact
+                          component={Transactions}
+                        />
+                        <Route
+                          path={`${process.env.REACT_APP_URL}/addgateway`}
+                          exact
+                          component={AddGateway}
+                        />
+                        <Route
+                          path={`${process.env.REACT_APP_URL}/pageFileManager`}
+                          exact
+                          component={PageFileManager}
+                        />
+                        {/* <Route
+                          path={`${process.env.REACT_APP_URL}/pageProfile`}
+                          exact
+                          component={PageProfile}
+                        /> */}
+                        <Route
+                          path={`${process.env.REACT_APP_URL}/pageProfile`}
+                          exact
+                          component={PageProfile}
+                        />
+                      </motion.div>
+                    </Switch>
+                    <Footer />
+                  </CollapsedSidebar>
+                </Route>
+                <Route
+                  path={[
+                    `${process.env.REACT_APP_URL}/PageError404`,
+                    `${process.env.REACT_APP_URL}/PageError500`,
+                    `${process.env.REACT_APP_URL}/PageError505`,
+                    `${process.env.REACT_APP_URL}/login`,
+                  ]}
+                >
+                  <MinimalLayout>
+                    <Switch location={location} key={location.pathname}>
+                      <motion.div
+                        initial="initial"
+                        animate="in"
+                        exit="out"
+                        variants={pageVariants}
+                        transition={pageTransition}
+                      >
+                        <Route
+                          path={`${process.env.REACT_APP_URL}/login`}
+                          component={Login}
+                        />
+                        <Route
+                          path={`${process.env.REACT_APP_URL}/PageError404`}
+                          component={PageError404}
+                        />
+                        <Route
+                          path={`${process.env.REACT_APP_URL}/PageError500`}
+                          component={PageError500}
+                        />
+                        <Route
+                          path={`${process.env.REACT_APP_URL}/PageError505`}
+                          component={PageError505}
+                        />
+                      </motion.div>
+                    </Switch>
+                  </MinimalLayout>
+                </Route>
+              </Switch>
               {/* </HashRouter> */}
             </Suspense>
           </>

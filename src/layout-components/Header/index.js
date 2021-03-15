@@ -34,9 +34,12 @@ const Header = (props) => {
 
   const loginRedirect = (e) => {
     e.preventDefault();
-    // console.log("good");
-    // props.history.push(`/login`);
     props.history.push(`${process.env.REACT_APP_URL}/login`);
+  };
+
+  const tranxRedirect = (e) => {
+    e.preventDefault();
+    props.history.push(`${process.env.REACT_APP_URL}/tranx`);
   };
 
   const homeRedirect = (e) => {
@@ -67,6 +70,14 @@ const Header = (props) => {
                   className="w-100 font-weight-bold rounded-sm"
                 >
                   Home
+                </Button>
+              </li>
+              <li>
+                <Button
+                  onClick={(e) => tranxRedirect(e)}
+                  className="font-weight-bold rounded-sm"
+                >
+                  Transactions
                 </Button>
               </li>
               <li>

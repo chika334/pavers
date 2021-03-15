@@ -14,33 +14,24 @@ import {
   ListItem,
   TextField,
 } from "@material-ui/core";
-
 import PerfectScrollbar from "react-perfect-scrollbar";
 import { useDropzone } from "react-dropzone";
 import CountUp from "react-countup";
-
 import CloseTwoToneIcon from "@material-ui/icons/CloseTwoTone";
 import PublishTwoToneIcon from "@material-ui/icons/PublishTwoTone";
 import AccountCircleTwoToneIcon from "@material-ui/icons/AccountCircleTwoTone";
 import CheckIcon from "@material-ui/icons/Check";
 import SearchTwoToneIcon from "@material-ui/icons/SearchTwoTone";
-
 import hero1 from "../../../assets/images/hero-bg/hero-8.jpg";
 import stock3 from "../../../assets/images/stock-photos/stock-6.jpg";
-
 import stock1 from "../../../assets/images/stock-photos/stock-4.jpg";
 import stock2 from "../../../assets/images/stock-photos/stock-5.jpg";
-
 import people1 from "../../../assets/images/stock-photos/people-1.jpg";
-
 import TrendingUpTwoToneIcon from "@material-ui/icons/TrendingUpTwoTone";
 import TrendingDownTwoToneIcon from "@material-ui/icons/TrendingDownTwoTone";
-
 import ArrowBackTwoToneIcon from "@material-ui/icons/ArrowBackTwoTone";
-
 import people3 from "../../../assets/images/stock-photos/people-3.jpg";
 import people2 from "../../../assets/images/stock-photos/people-2.jpg";
-
 import avatar1 from "../../../assets/images/avatars/avatar1.jpg";
 import avatar2 from "../../../assets/images/avatars/avatar2.jpg";
 import avatar3 from "../../../assets/images/avatars/avatar3.jpg";
@@ -1861,3 +1852,13 @@ export default function LivePreviewExample() {
     </>
   );
 }
+
+// import React, { Component } from "react";
+
+// class componentName extends Component {
+//   render() {
+//     return <>NICE</>;
+//   }
+// }
+
+// export default componentName;

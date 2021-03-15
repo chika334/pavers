@@ -6,10 +6,10 @@ import {
   LOGIN_FAIL,
 } from "./type";
 
-export const loginUser = (user) => (dispatch) => {
-  let isOk = true;
-  isOk = LOGIN_USER;
-  dispatch({
-    type: LOGIN_USER,
-  });
-};
+// export const loginUser = (user) => (dispatch) => {
+//   let isOk = true;
+//   isOk = LOGIN_USER;
+//   dispatch({
+//     type: LOGIN_USER,
+//   });
+// };

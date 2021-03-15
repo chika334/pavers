@@ -3,6 +3,7 @@ import clsx from "clsx";
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { connect, useSelector } from "react-redux";
+import Table2 from "../Tables2";
 import {
   Table,
   Grid,
@@ -141,7 +142,7 @@ function LivePreviewExample(props) {
                 </div>
               </div>
             </div>
-            <div className="px-4 mb-5 pt-4">
+            <div className="px-5 mb-5 pt-4">
               <Card
                 style={{ height: "130%" }}
                 className="d-block d-md-flex text-center text-md-left card-box p-4 align-items-center bg-secondary justify-content-between flex-row"
@@ -195,373 +196,365 @@ function LivePreviewExample(props) {
                         <Tab label="Payment Gateway" {...a11yProps(0)} />
                         <Tab label="Products" {...a11yProps(1)} />
                       </Tabs>
-
                     </div>
                   </div>
                 </div>
               </Card>
             </div>
             <TabPanel value={value} index={0}>
-            <div>
-              <div className="p-4">
+              <div>
+                <div className="p-4">
+                  <div className="text-center">
+                    <h5
+                      style={{ color: "#64b5f6" }}
+                      className="text-first font-weight-bold font-size-xxl"
+                    >
+                      Payment Gateway
+                    </h5>
+                    <p className="text-black-50 font-size-lg">
+                      These are the 3rd party gateway you have added to your
+                      profile
+                    </p>
+                  </div>
+                  <Grid container spacing={6}>
+                    <Grid item sm={6} md={4} lg={4} xl={4}>
+                      <Card className="card-box card-box-border-bottom border-primary my-4">
+                        <div className="text-center py-3">
+                          <div className="d-60 rounded-circle border-0 my-2 card-icon-wrapper bg-plum-plate text-white btn-icon mx-auto text-center">
+                            <FontAwesomeIcon
+                              icon={["far", "bell"]}
+                              className="font-size-xxl"
+                            />
+                          </div>
+                          <div className="font-size-xl font-weight-bold pt-2 text-black">
+                            Paystack
+                          </div>
+                          <div className="opacity-5 pb-3">3 Products</div>
+
+                          <div className="divider mx-auto w-50 my-3" />
+
+                          <div className="text-center">
+                            <Button
+                              className="p-0 d-30 mx-1 btn-transition-none border-0 btn-outline-first"
+                              variant="outlined"
+                            >
+                              <span className="btn-wrapper--icon">
+                                <FontAwesomeIcon
+                                  icon={["far", "eye"]}
+                                  className="font-size-lg"
+                                />
+                              </span>
+                            </Button>
+                            <Button
+                              className="p-0 d-30 mx-1 btn-transition-none border-0 btn-outline-warning"
+                              variant="outlined"
+                            >
+                              <span className="btn-wrapper--icon">
+                                <FontAwesomeIcon
+                                  icon={["fas", "edit"]}
+                                  className="font-size-lg"
+                                />
+                              </span>
+                            </Button>
+                            <Button
+                              className="p-0 d-30 mx-1 btn-transition-none border-0 btn-outline-danger"
+                              variant="outlined"
+                            >
+                              <span className="btn-wrapper--icon">
+                                <FontAwesomeIcon
+                                  icon={["fas", "times"]}
+                                  className="font-size-lg"
+                                />
+                              </span>
+                            </Button>
+                          </div>
+                        </div>
+                      </Card>
+                    </Grid>
+                    <Grid item sm={6} md={4} lg={4} xl={4}>
+                      <Card className="card-box card-box-border-bottom border-primary my-4">
+                        <div className="text-center py-3">
+                          <div className="d-60 rounded-circle border-0 my-2 card-icon-wrapper bg-happy-fisher text-white btn-icon mx-auto text-center">
+                            <FontAwesomeIcon
+                              icon={["fas", "cubes"]}
+                              className="font-size-xl"
+                            />
+                          </div>
+                          <div className="font-size-xl font-weight-bold pt-2 text-black">
+                            Flutterwave
+                          </div>
+                          <div className="opacity-5 pb-3">Latest analytics</div>
+
+                          <div className="divider mx-auto w-50 my-3" />
+                          <div className="text-center">
+                            <Button
+                              className="p-0 d-30 mx-1 btn-transition-none border-0 btn-outline-first"
+                              variant="outlined"
+                            >
+                              <span className="btn-wrapper--icon">
+                                <FontAwesomeIcon
+                                  icon={["far", "eye"]}
+                                  className="font-size-lg"
+                                />
+                              </span>
+                            </Button>
+                            <Button
+                              className="p-0 d-30 mx-1 btn-transition-none border-0 btn-outline-warning"
+                              variant="outlined"
+                            >
+                              <span className="btn-wrapper--icon">
+                                <FontAwesomeIcon
+                                  icon={["fas", "edit"]}
+                                  className="font-size-lg"
+                                />
+                              </span>
+                            </Button>
+                            <Button
+                              className="p-0 d-30 mx-1 btn-transition-none border-0 btn-outline-danger"
+                              variant="outlined"
+                            >
+                              <span className="btn-wrapper--icon">
+                                <FontAwesomeIcon
+                                  icon={["fas", "times"]}
+                                  className="font-size-lg"
+                                />
+                              </span>
+                            </Button>
+                          </div>
+                        </div>
+                      </Card>
+                    </Grid>
+                    <Grid item sm={6} md={4} lg={4} xl={4}>
+                      <Card className="card-box card-box-border-bottom border-primary my-4">
+                        <div className="text-center py-3">
+                          <div className="d-60 rounded-circle border-0 my-2 card-icon-wrapper bg-love-kiss text-white btn-icon mx-auto text-center">
+                            <FontAwesomeIcon
+                              icon={["fas", "shapes"]}
+                              className="font-size-xl"
+                            />
+                          </div>
+                          <div className="font-size-xl font-weight-bold pt-2 text-black">
+                            Paypal
+                          </div>
+                          <div className="opacity-5 pb-3">
+                            Successful orders
+                          </div>
+
+                          <div className="divider mx-auto w-50 my-3" />
+                          <div className="text-center">
+                            <Button
+                              className="p-0 d-30 mx-1 btn-transition-none border-0 btn-outline-first"
+                              variant="outlined"
+                            >
+                              <span className="btn-wrapper--icon">
+                                <FontAwesomeIcon
+                                  icon={["far", "eye"]}
+                                  className="font-size-lg"
+                                />
+                              </span>
+                            </Button>
+                            <Button
+                              className="p-0 d-30 mx-1 btn-transition-none border-0 btn-outline-warning"
+                              variant="outlined"
+                            >
+                              <span className="btn-wrapper--icon">
+                                <FontAwesomeIcon
+                                  icon={["fas", "edit"]}
+                                  className="font-size-lg"
+                                />
+                              </span>
+                            </Button>
+                            <Button
+                              className="p-0 d-30 mx-1 btn-transition-none border-0 btn-outline-danger"
+                              variant="outlined"
+                            >
+                              <span className="btn-wrapper--icon">
+                                <FontAwesomeIcon
+                                  icon={["fas", "times"]}
+                                  className="font-size-lg"
+                                />
+                              </span>
+                            </Button>
+                          </div>
+                        </div>
+                      </Card>
+                    </Grid>
+                  </Grid>
+                  <div className="text-center">
+                    <Button variant="text" className="text-first font-size-lg">
+                      View All
+                    </Button>
+                  </div>
+                </div>
+                <div className="divider opacity-3 rounded-lg m-3" />
+              </div>
+              {/* </div> */}
+            </TabPanel>
+            <TabPanel value={value} index={1}>
+              <div className="p-2">
                 <div className="text-center">
-                  <h5
-                    style={{ color: "#64b5f6" }}
-                    className="text-first font-weight-bold font-size-xxl"
-                  >
-                    Payment Gateway
+                  <h5 className="text-success font-weight-bold font-size-xxl">
+                    Product
                   </h5>
                   <p className="text-black-50 font-size-lg">
-                    These are the 3rd party gateway you have added to your
-                    profile
+                    These are the products that have been successfully added to
+                    your profile with their respective Payment Gateway
                   </p>
                 </div>
-                <Grid container spacing={6}>
-                  <Grid item sm={6} md={4} lg={4} xl={4}>
-                    <Card className="card-box card-box-border-bottom border-primary my-4">
-                      <div className="text-center py-3">
-                        <div className="d-60 rounded-circle border-0 my-2 card-icon-wrapper bg-plum-plate text-white btn-icon mx-auto text-center">
-                          <FontAwesomeIcon
-                            icon={["far", "bell"]}
-                            className="font-size-xxl"
-                          />
-                        </div>
-                        <div className="font-size-xl font-weight-bold pt-2 text-black">
-                          Paystack
-                        </div>
-                        <div className="opacity-5 pb-3">3 Products</div>
+                <Table2 />
+                {/* <div className="responsive-container">
+                  <Card className="card-box card-box-border-bottom border-primary my-4 p-2">
+                    <table>
+                      <thead>
+                        <tr>
+                          <th className="bg-white text-center">Product</th>
+                          <th className="bg-white text-center">Date Added</th>
+                          <th className="bg-white text-center">
+                            No. of Payment gateways
+                          </th>
+                          <th className="bg-white text-center">Actions</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td className="" data-title="Product">
+                            <div className="table-text">
+                              <div className="d-40 text-white d-flex align-items-center justify-content-center rounded-pill mr-3 bg-plum-plate">
+                                <FontAwesomeIcon
+                                  icon={["far", "bell"]}
+                                  className="font-size-xxl"
+                                />
+                              </div>
+                              <div>
+                                <div className="font-weight-bold">Fastpayr</div>
+                              </div>
+                            </div>
+                          </td>
+                          <td
+                            className="table-text"
+                            data-title="Date Added"
+                          >
+                            <span>14 October</span>
+                          </td>
+                          <td
+                            className="table-text"
+                            data-title="No. of Payment gateways"
+                          >
+                            <span>2</span>
+                          </td>
+                          <td data-title="Actions" className="table-text">
+                            <Button
+                              className="p-0 d-30 mx-1 btn-transition-none border-0 btn-outline-first"
+                              variant="outlined"
+                            >
+                              <span className="btn-wrapper--icon">
+                                <FontAwesomeIcon
+                                  icon={["far", "eye"]}
+                                  className="font-size-lg"
+                                />
+                              </span>
+                            </Button>
+                            <Button
+                              className="p-0 d-30 mx-1 btn-transition-none border-0 btn-outline-warning"
+                              variant="outlined"
+                            >
+                              <span className="btn-wrapper--icon">
+                                <FontAwesomeIcon
+                                  icon={["fas", "edit"]}
+                                  className="font-size-lg"
+                                />
+                              </span>
+                            </Button>
+                            <Button
+                              className="p-0 d-30 mx-1 btn-transition-none border-0 btn-outline-danger"
+                              variant="outlined"
+                            >
+                              <span className="btn-wrapper--icon">
+                                <FontAwesomeIcon
+                                  icon={["fas", "times"]}
+                                  className="font-size-lg"
+                                />
+                              </span>
+                            </Button>
+                          </td>
+                        </tr>
+                        <tr
+                          className=""
+                          style={{ position: "relative", center: 0 }}
+                        >
+                          <td
+                            className="table-content"
+                            // style={{ position: "relative", center: 0 }}
+                            data-title="Product"
+                          >
+                            <div className="table-text">
+                              <div className="d-40 text-white d-flex align-items-center justify-content-center rounded-pill bg-plum-plate">
+                                <FontAwesomeIcon
+                                  icon={["far", "bell"]}
+                                  className="font-size-xxl"
+                                />
+                              </div>
+                              <div className="">
+                                <div className="font-weight-bold">Fastpayr</div>
+                              </div>
+                            </div>
+                          </td>
+                          <td className="table-text" data-title="Date Added">
+                            <span>14 October</span>
+                          </td>
+                          <td
+                            className="table-text"
+                            data-title="No. of Payment gateways"
+                          >
+                            <span>2</span>
+                          </td>
+                          <td className="table-text" data-title="Actions">
+                            <Button
+                              className="p-0 d-30 mx-1 btn-transition-none border-0 btn-outline-first"
+                              variant="outlined"
+                            >
+                              <span className="btn-wrapper--icon">
+                                <FontAwesomeIcon
+                                  icon={["far", "eye"]}
+                                  className="font-size-lg"
+                                />
+                              </span>
+                            </Button>
+                            <Button
+                              className="p-0 d-30 mx-1 btn-transition-none border-0 btn-outline-warning"
+                              variant="outlined"
+                            >
+                              <span className="btn-wrapper--icon">
+                                <FontAwesomeIcon
+                                  icon={["fas", "edit"]}
+                                  className="font-size-lg"
+                                />
+                              </span>
+                            </Button>
+                            <Button
+                              className="p-0 d-30 mx-1 btn-transition-none border-0 btn-outline-danger"
+                              variant="outlined"
+                            >
+                              <span className="btn-wrapper--icon">
+                                <FontAwesomeIcon
+                                  icon={["fas", "times"]}
+                                  className="font-size-lg"
+                                />
+                              </span>
+                            </Button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </Card>
+                </div> */}
 
-                        <div className="divider mx-auto w-50 my-3" />
-
-                        <div className="text-center">
-                          <Button
-                            className="p-0 d-30 mx-1 btn-transition-none border-0 btn-outline-first"
-                            variant="outlined"
-                          >
-                            <span className="btn-wrapper--icon">
-                              <FontAwesomeIcon
-                                icon={["far", "eye"]}
-                                className="font-size-lg"
-                              />
-                            </span>
-                          </Button>
-                          <Button
-                            className="p-0 d-30 mx-1 btn-transition-none border-0 btn-outline-warning"
-                            variant="outlined"
-                          >
-                            <span className="btn-wrapper--icon">
-                              <FontAwesomeIcon
-                                icon={["fas", "edit"]}
-                                className="font-size-lg"
-                              />
-                            </span>
-                          </Button>
-                          <Button
-                            className="p-0 d-30 mx-1 btn-transition-none border-0 btn-outline-danger"
-                            variant="outlined"
-                          >
-                            <span className="btn-wrapper--icon">
-                              <FontAwesomeIcon
-                                icon={["fas", "times"]}
-                                className="font-size-lg"
-                              />
-                            </span>
-                          </Button>
-                        </div>
-                      </div>
-                    </Card>
-                  </Grid>
-                  <Grid item sm={6} md={4} lg={4} xl={4}>
-                    <Card className="card-box card-box-border-bottom border-primary my-4">
-                      <div className="text-center py-3">
-                        <div className="d-60 rounded-circle border-0 my-2 card-icon-wrapper bg-happy-fisher text-white btn-icon mx-auto text-center">
-                          <FontAwesomeIcon
-                            icon={["fas", "cubes"]}
-                            className="font-size-xl"
-                          />
-                        </div>
-                        <div className="font-size-xl font-weight-bold pt-2 text-black">
-                          Flutterwave
-                        </div>
-                        <div className="opacity-5 pb-3">Latest analytics</div>
-
-                        <div className="divider mx-auto w-50 my-3" />
-                        <div className="text-center">
-                          <Button
-                            className="p-0 d-30 mx-1 btn-transition-none border-0 btn-outline-first"
-                            variant="outlined"
-                          >
-                            <span className="btn-wrapper--icon">
-                              <FontAwesomeIcon
-                                icon={["far", "eye"]}
-                                className="font-size-lg"
-                              />
-                            </span>
-                          </Button>
-                          <Button
-                            className="p-0 d-30 mx-1 btn-transition-none border-0 btn-outline-warning"
-                            variant="outlined"
-                          >
-                            <span className="btn-wrapper--icon">
-                              <FontAwesomeIcon
-                                icon={["fas", "edit"]}
-                                className="font-size-lg"
-                              />
-                            </span>
-                          </Button>
-                          <Button
-                            className="p-0 d-30 mx-1 btn-transition-none border-0 btn-outline-danger"
-                            variant="outlined"
-                          >
-                            <span className="btn-wrapper--icon">
-                              <FontAwesomeIcon
-                                icon={["fas", "times"]}
-                                className="font-size-lg"
-                              />
-                            </span>
-                          </Button>
-                        </div>
-                      </div>
-                    </Card>
-                  </Grid>
-                  <Grid item sm={6} md={4} lg={4} xl={4}>
-                    <Card className="card-box card-box-border-bottom border-primary my-4">
-                      <div className="text-center py-3">
-                        <div className="d-60 rounded-circle border-0 my-2 card-icon-wrapper bg-love-kiss text-white btn-icon mx-auto text-center">
-                          <FontAwesomeIcon
-                            icon={["fas", "shapes"]}
-                            className="font-size-xl"
-                          />
-                        </div>
-                        <div className="font-size-xl font-weight-bold pt-2 text-black">
-                          Paypal
-                        </div>
-                        <div className="opacity-5 pb-3">Successful orders</div>
-
-                        <div className="divider mx-auto w-50 my-3" />
-                        <div className="text-center">
-                          <Button
-                            className="p-0 d-30 mx-1 btn-transition-none border-0 btn-outline-first"
-                            variant="outlined"
-                          >
-                            <span className="btn-wrapper--icon">
-                              <FontAwesomeIcon
-                                icon={["far", "eye"]}
-                                className="font-size-lg"
-                              />
-                            </span>
-                          </Button>
-                          <Button
-                            className="p-0 d-30 mx-1 btn-transition-none border-0 btn-outline-warning"
-                            variant="outlined"
-                          >
-                            <span className="btn-wrapper--icon">
-                              <FontAwesomeIcon
-                                icon={["fas", "edit"]}
-                                className="font-size-lg"
-                              />
-                            </span>
-                          </Button>
-                          <Button
-                            className="p-0 d-30 mx-1 btn-transition-none border-0 btn-outline-danger"
-                            variant="outlined"
-                          >
-                            <span className="btn-wrapper--icon">
-                              <FontAwesomeIcon
-                                icon={["fas", "times"]}
-                                className="font-size-lg"
-                              />
-                            </span>
-                          </Button>
-                        </div>
-                      </div>
-                    </Card>
-                  </Grid>
-                </Grid>
                 <div className="text-center">
                   <Button variant="text" className="text-first font-size-lg">
                     View All
                   </Button>
                 </div>
               </div>
-              <div className="divider opacity-3 rounded-lg m-3" />
-            </div>
-            {/* </div> */}
-            </TabPanel>
-            <TabPanel value={value} index={1}>
-            <div className="p-2">
-              <div className="text-center">
-                <h5 className="text-success font-weight-bold font-size-xxl">
-                  Product
-                </h5>
-                <p className="text-black-50 font-size-lg">
-                  These are the products that have been successfully added to
-                  your profile with their respective Payment Gateway
-                </p>
-              </div>
-              <div className="responsive-container">
-                <table>
-                  <thead>
-                    <tr>
-                      <th className="bg-white text-left px-4">Product</th>
-                      <th className="bg-white text-center">Date Added</th>
-                      <th className="bg-white text-center">
-                        No. of Payment gateways
-                      </th>
-                      <th className="bg-white text-right px-4">Actions</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      {/* <td data-title="id">{index}</td> */}
-                      <td data-title="Product">
-                        {/* <div className="d-flex align-items-center">
-                          <div className="d-40 text-white d-flex align-items-center justify-content-center rounded-pill mr-3 bg-plum-plate"> */}
-                        <FontAwesomeIcon
-                          icon={["far", "bell"]}
-                          // className="font-size-xxl"
-                        />
-                        {/* </div> */}
-                        <div>
-                          <div
-                          // className="font-weight-bold">
-                          >
-                            Fastpayr
-                          </div>
-                        </div>
-                        {/* </div> */}
-                      </td>
-                      <td
-                        // className="text-center"
-                        data-title="Date Added"
-                      >
-                        <span>14 October</span>
-                      </td>
-                      <td
-                        // className="text-center"
-                        data-title="No. of Payment gateways"
-                      >
-                        <span>2</span>
-                      </td>
-                      <td
-                        data-title="Actions"
-                        // className="text-right px-4"
-                      >
-                        <Button
-                          className="p-0 d-30 mx-1 btn-transition-none border-0 btn-outline-first"
-                          variant="outlined"
-                        >
-                          <span className="btn-wrapper--icon">
-                            <FontAwesomeIcon
-                              icon={["far", "eye"]}
-                              className="font-size-lg"
-                            />
-                          </span>
-                        </Button>
-                        <Button
-                          className="p-0 d-30 mx-1 btn-transition-none border-0 btn-outline-warning"
-                          variant="outlined"
-                        >
-                          <span className="btn-wrapper--icon">
-                            <FontAwesomeIcon
-                              icon={["fas", "edit"]}
-                              className="font-size-lg"
-                            />
-                          </span>
-                        </Button>
-                        <Button
-                          className="p-0 d-30 mx-1 btn-transition-none border-0 btn-outline-danger"
-                          variant="outlined"
-                        >
-                          <span className="btn-wrapper--icon">
-                            <FontAwesomeIcon
-                              icon={["fas", "times"]}
-                              className="font-size-lg"
-                            />
-                          </span>
-                        </Button>
-                      </td>
-                    </tr>
-                    <tr>
-                      {/* <td data-title="id">{index}</td> */}
-                      <td data-title="Product">
-                        {/* <div className="d-flex align-items-center">
-                          <div className="d-40 text-white d-flex align-items-center justify-content-center rounded-pill mr-3 bg-plum-plate"> */}
-                        <FontAwesomeIcon
-                          icon={["far", "bell"]}
-                          // className="font-size-xxl"
-                        />
-                        {/* </div> */}
-                        <div>
-                          <div
-                          // className="font-weight-bold">
-                          >
-                            Fastpayr
-                          </div>
-                        </div>
-                        {/* </div> */}
-                      </td>
-                      <td
-                        // className="text-center"
-                        data-title="Date Added"
-                      >
-                        <span>14 October</span>
-                      </td>
-                      <td
-                        // className="text-center"
-                        data-title="No. of Payment gateways"
-                      >
-                        <span>2</span>
-                      </td>
-                      <td
-                        data-title="Actions"
-                        // className="text-right px-4"
-                      >
-                        <Button
-                          className="p-0 d-30 mx-1 btn-transition-none border-0 btn-outline-first"
-                          variant="outlined"
-                        >
-                          <span className="btn-wrapper--icon">
-                            <FontAwesomeIcon
-                              icon={["far", "eye"]}
-                              className="font-size-lg"
-                            />
-                          </span>
-                        </Button>
-                        <Button
-                          className="p-0 d-30 mx-1 btn-transition-none border-0 btn-outline-warning"
-                          variant="outlined"
-                        >
-                          <span className="btn-wrapper--icon">
-                            <FontAwesomeIcon
-                              icon={["fas", "edit"]}
-                              className="font-size-lg"
-                            />
-                          </span>
-                        </Button>
-                        <Button
-                          className="p-0 d-30 mx-1 btn-transition-none border-0 btn-outline-danger"
-                          variant="outlined"
-                        >
-                          <span className="btn-wrapper--icon">
-                            <FontAwesomeIcon
-                              icon={["fas", "times"]}
-                              className="font-size-lg"
-                            />
-                          </span>
-                        </Button>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-
-              <div className="text-center">
-                <Button variant="text" className="text-first font-size-lg">
-                  View All
-                </Button>
-              </div>
-            </div>
             </TabPanel>
             <hr />
 
