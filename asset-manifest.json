@@ -1,20 +1,14 @@
 {
   "files": {
-    "static/js/0.1a991284.chunk.js": "/pavers/static/js/0.1a991284.chunk.js",
-    "main.css": "/pavers/static/css/main.d6e72357.chunk.css",
-    "main.js": "/pavers/static/js/main.0fa2246d.chunk.js",
-    "runtime-main.js": "/pavers/static/js/runtime-main.b350b02a.js",
-    "static/css/3.2e1dda66.chunk.css": "/pavers/static/css/3.2e1dda66.chunk.css",
-    "static/js/3.0d47dc8e.chunk.js": "/pavers/static/js/3.0d47dc8e.chunk.js",
-    "static/css/4.859f00eb.chunk.css": "/pavers/static/css/4.859f00eb.chunk.css",
-    "static/js/4.874bcdd3.chunk.js": "/pavers/static/js/4.874bcdd3.chunk.js",
-    "static/js/5.7dfabcb0.chunk.js": "/pavers/static/js/5.7dfabcb0.chunk.js",
-    "static/js/6.c7f56bf6.chunk.js": "/pavers/static/js/6.c7f56bf6.chunk.js",
+    "main.css": "/pavers/static/css/main.f921fae8.chunk.css",
+    "main.js": "/pavers/static/js/main.a60d9a9e.chunk.js",
+    "runtime-main.js": "/pavers/static/js/runtime-main.82a2636a.js",
+    "static/css/2.58f18128.chunk.css": "/pavers/static/css/2.58f18128.chunk.css",
+    "static/js/2.bd97bc53.chunk.js": "/pavers/static/js/2.bd97bc53.chunk.js",
     "index.html": "/pavers/index.html",
-    "precache-manifest.0c195b105f96e73f19d5cd5fb79b5f7b.js": "/pavers/precache-manifest.0c195b105f96e73f19d5cd5fb79b5f7b.js",
+    "precache-manifest.b89aaafe59966054e9640c52ae0e0ae7.js": "/pavers/precache-manifest.b89aaafe59966054e9640c52ae0e0ae7.js",
     "service-worker.js": "/pavers/service-worker.js",
-    "static/js/3.0d47dc8e.chunk.js.LICENSE.txt": "/pavers/static/js/3.0d47dc8e.chunk.js.LICENSE.txt",
-    "static/js/4.874bcdd3.chunk.js.LICENSE.txt": "/pavers/static/js/4.874bcdd3.chunk.js.LICENSE.txt",
+    "static/js/2.bd97bc53.chunk.js.LICENSE.txt": "/pavers/static/js/2.bd97bc53.chunk.js.LICENSE.txt",
     "static/media/404.svg": "/pavers/static/media/404.bb787358.svg",
     "static/media/500.svg": "/pavers/static/media/500.846fe400.svg",
     "static/media/Pavers.svg": "/pavers/static/media/Pavers.326ad5dc.svg",
@@ -37,10 +31,10 @@
     "static/media/stock-6.jpg": "/pavers/static/media/stock-6.9b2cf53c.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.b350b02a.js",
-    "static/css/3.2e1dda66.chunk.css",
-    "static/js/3.0d47dc8e.chunk.js",
-    "static/css/main.d6e72357.chunk.css",
-    "static/js/main.0fa2246d.chunk.js"
+    "static/js/runtime-main.82a2636a.js",
+    "static/css/2.58f18128.chunk.css",
+    "static/js/2.bd97bc53.chunk.js",
+    "static/css/main.f921fae8.chunk.css",
+    "static/js/main.a60d9a9e.chunk.js"
   ]
 }

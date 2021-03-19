@@ -1,55 +1,31 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e7db19035d5777ed8a6c91c7e9d34a56",
+    "revision": "a2cfe46d11c60c3aec6a746142feee86",
     "url": "/pavers/index.html"
   },
   {
-    "revision": "bf38b129576308dbd7d7",
-    "url": "/pavers/static/css/3.2e1dda66.chunk.css"
+    "revision": "7a19426824bceb1ee206",
+    "url": "/pavers/static/css/2.58f18128.chunk.css"
   },
   {
-    "revision": "60462300d25428effce8",
-    "url": "/pavers/static/css/4.859f00eb.chunk.css"
+    "revision": "9a531c2da4d02b0854fc",
+    "url": "/pavers/static/css/main.f921fae8.chunk.css"
   },
   {
-    "revision": "b7adb9de2527b6c2636f",
-    "url": "/pavers/static/css/main.d6e72357.chunk.css"
+    "revision": "7a19426824bceb1ee206",
+    "url": "/pavers/static/js/2.bd97bc53.chunk.js"
   },
   {
-    "revision": "27a4aff09c63d99e5902",
-    "url": "/pavers/static/js/0.1a991284.chunk.js"
+    "revision": "e99e737a88fbfb440df1db6688883e40",
+    "url": "/pavers/static/js/2.bd97bc53.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "bf38b129576308dbd7d7",
-    "url": "/pavers/static/js/3.0d47dc8e.chunk.js"
+    "revision": "9a531c2da4d02b0854fc",
+    "url": "/pavers/static/js/main.a60d9a9e.chunk.js"
   },
   {
-    "revision": "11788f3ddf5c47c4e27da33ea326c1d8",
-    "url": "/pavers/static/js/3.0d47dc8e.chunk.js.LICENSE.txt"
-  },
-  {
-    "revision": "60462300d25428effce8",
-    "url": "/pavers/static/js/4.874bcdd3.chunk.js"
-  },
-  {
-    "revision": "275fe79abee3b697f1673c8bd9c58856",
-    "url": "/pavers/static/js/4.874bcdd3.chunk.js.LICENSE.txt"
-  },
-  {
-    "revision": "32ac8b514e10e42c33ef",
-    "url": "/pavers/static/js/5.7dfabcb0.chunk.js"
-  },
-  {
-    "revision": "d5b38726d9199a52afc2",
-    "url": "/pavers/static/js/6.c7f56bf6.chunk.js"
-  },
-  {
-    "revision": "b7adb9de2527b6c2636f",
-    "url": "/pavers/static/js/main.0fa2246d.chunk.js"
-  },
-  {
-    "revision": "a258368676c09b5c506e",
-    "url": "/pavers/static/js/runtime-main.b350b02a.js"
+    "revision": "6c11fde5c4fe867ae4bf",
+    "url": "/pavers/static/js/runtime-main.82a2636a.js"
   },
   {
     "revision": "bb78735886d2098cfa1b3007214a8832",
